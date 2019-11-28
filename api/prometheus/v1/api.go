@@ -29,7 +29,7 @@ import (
 
 	"github.com/prometheus/common/model"
 
-	"github.com/prometheus/client_golang/api"
+	"github.com/GuoCeng/client_golang/api"
 )
 
 func init() {
