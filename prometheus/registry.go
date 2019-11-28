@@ -372,6 +372,10 @@ func (r *Registry) Unregister(c Collector) bool {
 			collectorID ^= desc.id
 			descIDs[desc.id] = struct{}{}
 		}
+		//删除dimHashesByName,防止刷新时，因为加载了相同的Desc，导致错误
+		if _, ok := r.dimHashesByName[desc.fqName]; ok {
+			delete(r.dimHashesByName, desc.fqName)
+		}
 	}
 
 	r.mtx.RLock()
