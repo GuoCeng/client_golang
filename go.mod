@@ -11,6 +11,4 @@ require (
 	golang.org/x/sys v0.0.0-20191010194322-b09406accb47
 )
 
-replace github.com/prometheus/client_golang => github.com/GuoCeng/client_golang v1.2.1
-
 go 1.11
